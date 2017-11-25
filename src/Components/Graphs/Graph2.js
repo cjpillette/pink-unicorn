@@ -4,7 +4,6 @@ import {
   CartesianGrid,
   XAxis,
   YAxis,
-  Area,
   Tooltip,
   Legend,
   Line,
@@ -12,17 +11,24 @@ import {
 } from 'recharts'
 
 export default function Graph1({}) {
-  const data = [{name: 'a', value: 12}, {name: 'b', value: 24}, {name: 'c', value: 50}]
+  const myData = [
+    {name: '10/11/2017', rouge: 2500, blanc: 2100},
+    {name: '11/11/2017', rouge: 3000, blanc: 1850},
+    {name: '12/11/2017', rouge: 2800, blanc: 1670},
+    {name: '13/11/2017', rouge: 2600, blanc: 2100},
+    {name: '14/11/2017', rouge: 1700, blanc: 1890},
+    {name: '15/11/2017', rouge: 2100, blanc: 1650},
+    {name: '16/11/2017', rouge: 1500, blanc: 1300}
+  ]
   return(
-    <ComposedChart width={730} height={250} data={data}>
+    <ComposedChart width={730} height={250} data={myData}>
       <XAxis dataKey="name" />
       <YAxis />
       <Tooltip />
       <Legend />
       <CartesianGrid stroke="#f5f5f5" />
-      <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" />
-      <Bar dataKey="pv" barSize={20} fill="#413ea0" />
-      <Line type="monotone" dataKey="uv" stroke="#ff7300" />
+      <Bar dataKey="rouge" barSize={20} fill="#413ea0" />
+      <Line type="monotone" dataKey="blanc" stroke="#ff7300" />
     </ComposedChart>
   )
 }
