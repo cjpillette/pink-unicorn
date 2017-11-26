@@ -13,8 +13,10 @@ class App extends Component {
       <div className="App">
         <MuiThemeProvider>
           <MyAppBar />
-          <Graph1 />
-          <Graph2 />
+          <div style={{ margin: 'auto', maxWidth: '600px', marginTop: '60px'}}>
+            <Graph1 />
+            <Graph2 />
+          </div>
         </MuiThemeProvider>
       </div>
     );

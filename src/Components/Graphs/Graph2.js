@@ -21,8 +21,8 @@ export default function Graph1({}) {
     {name: '16/11/2017', rouge: 1500, blanc: 1300}
   ]
   return(
-    <ComposedChart width={730} height={250} data={myData}>
-      <XAxis dataKey="name" />
+    <ComposedChart width={400} height={200} data={myData}>
+      <XAxis dataKey="name" style={{ fontSize: '12px' }}/>
       <YAxis />
       <Tooltip />
       <Legend />
