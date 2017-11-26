@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 import MyAppBar from './Components/Header/MyAppBar'
+import MainCalendar from './Components/Calendar/MainCalendar'
 import Graph1 from './Components/Graphs/Graph1'
 import Graph2 from './Components/Graphs/Graph2'
 
@@ -13,6 +14,7 @@ class App extends Component {
       <div className="App">
         <MuiThemeProvider>
           <MyAppBar />
+          <MainCalendar />
           <div style={{ margin: 'auto', maxWidth: '600px', marginTop: '60px'}}>
             <Graph1 />
             <Graph2 />
